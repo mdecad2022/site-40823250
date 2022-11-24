@@ -11,37 +11,27 @@
 <li data-aria-level="1" data-aria-posinset="2"><span data-contrast="auto"><span>利用   replit 帳號所啟動的動態網站進行內容管理</span></span><span> </span></li>
 <li data-aria-level="1" data-aria-posinset="3"><span data-contrast="auto"><span>動態轉為靜態網站內容之後,   要設法與 Github 倉儲同步.</span></span><span> </span></li>
 </ol>
-<p><span> </span></p>
-<p><span data-contrast="auto"><span>之後申請帳號都使用 @nfu   電子郵箱</span></span><span> </span></p>
-<p><span> </span></p>
-<p><span data-contrast="auto"><span>修補課程網站安全疑慮:</span></span><span> </span></p>
-<p><span> </span></p>
-<p><span data-contrast="auto"><span>目的:   不想讓 config/config 帶有編碼後的管理者密碼</span></span><span> </span></p>
-<p><span> </span></p>
-<p><span data-contrast="auto"><span>執行步驟:</span></span><span> </span></p>
-<p><span> </span></p>
+<p><span data-contrast="auto"> <span>之後申請帳號都使用 @nfu   電子郵箱</span></span><span> </span></p>
+<p><span data-contrast="auto"> <span>修補課程網站安全疑慮:</span></span><span> </span></p>
+<p><span data-contrast="auto"> <span>目的:   不想讓 config/config 帶有編碼後的管理者密碼</span></span><span> </span></p>
+<p><span data-contrast="auto"> <span>執行步驟:</span></span><span> </span></p>
+<p><span data-contrast="auto"> <span>必須先在個人的 mdecad2022/site-github_帳號  倉儲進行處理</span></span><span> </span></p>
 <ol>
-<li data-aria-level="2" data-aria-posinset="1"><span data-contrast="auto"><span>必須先在個人的 mdecad2022/site-github_帳號  倉儲進行處理</span></span><span> </span></li>
 <li data-aria-level="2" data-aria-posinset="2"><span data-contrast="auto"><span>第一步就是刪除 config/config 設定檔案</span></span><span> </span></li>
 <li data-aria-level="2" data-aria-posinset="3"><span data-contrast="auto"><span>修改 .gitignore 成為:  <span> </span></span></span><a href="https://raw.githubusercontent.com/mdecad2022/site-41023242/main/.gitignore"><span data-contrast="auto"><span>https://raw.githubusercontent.com/mdecad2022/site-41023242/main/.gitignore</span></span></a><span data-contrast="auto"><span> </span></span><span> </span></li>
 <li data-aria-level="2" data-aria-posinset="4"><span data-contrast="auto"><span>加入 main.py:  <span> </span></span></span><a href="https://raw.githubusercontent.com/mdecad2022/site-41023242/main/main.py"><span data-contrast="auto"><span>https://raw.githubusercontent.com/mdecad2022/site-41023242/main/main.py</span></span></a><span data-contrast="auto"><span> </span></span><span> </span></li>
 <li data-aria-level="2" data-aria-posinset="5"><span data-contrast="auto"><span>在倉儲根目錄加入   nocache.py, 內容如:  <span> </span></span></span><a href="https://github.com/mdecycu/cmsimde/blob/2a41b26b6d9b1446a8b448bb6fb58a6dbb41c867/nocache.py"><span data-contrast="auto"><span>https://github.com/mdecycu/cmsimde/blob/2a41b26b6d9b1446a8b448bb6fb58a6dbb41c867/nocache.py</span></span></a><span data-contrast="auto"><span> </span></span><span> </span></li>
 </ol>
-<p><span> </span></p>
-<p><span data-contrast="auto"><span>之後再設法以   import 方式, 利用個人課程倉儲內容在  replit 建立  Repl 專案.</span></span><span> </span></p>
-<p><span> </span></p>
-<p><span data-contrast="auto"><span>至於  Repl 專案, 必須在 Shell, 執行下列兩則指令:</span></span><span data-contrast="none"><span>git submodule update --init --recursive<span> </span></span></span><span><span> </span><br/></span><span> </span></p>
-<p><span> </span></p>
+<p><span data-contrast="auto"> <span>之後再設法以   import 方式, 利用個人課程倉儲內容在  replit 建立  Repl 專案.</span></span><span> </span></p>
+<p><span data-contrast="auto"> <span>至於  Repl 專案, 必須在 Shell, 執行下列兩則指令:</span></span><span data-contrast="none"><span>git submodule update --init --recursive<span> </span></span></span><span><span> </span></span><span data-contrast="auto"> </span></p>
 <p><span data-contrast="auto"><span>在倉儲根目錄執行   </span></span><span> </span></p>
 <p><span data-contrast="none"><span>表示要取下所有子模組的內容</span></span><span> </span></p>
-<p><span> </span></p>
-<p><span data-contrast="none"><span>並且安裝啟動  cmsimde  所需要的  Python 模組:  </span></span><span> </span></p>
+<p><span data-contrast="none"> <span>並且安裝啟動  cmsimde  所需要的  Python 模組:  </span></span><span> </span></p>
 <p><span> </span></p>
 <p><span data-contrast="none"><span>    pip install  <span> </span></span></span><span data-contrast="none"><span>flask flask_cors bs4 lxml pelican markdown gevent</span></span><span> </span></p>
 <p><span> </span></p>
 <p><a href="https://nfuedu.sharepoint.com/:v:/s/cad2022/ETBY6qMCthVKrmxkBA4FdmQBVD5UIJB-O_Mgtl1IA6xykg?e=IaMOwE"><span data-contrast="auto"><span>Replit 專案上的靜態內容同步至原始課程倉儲教學影片</span></span></a><span> </span></p>
-<p><span> </span></p>
-<p><span data-contrast="none"><span>2b 開始在 <span> </span></span></span><a href="https://exam.cycu.org/"><span data-contrast="auto"><span>https://exam.cycu.org</span></span></a><span data-contrast="none"><span>  <span> </span></span></span><span data-contrast="none"><span>建立考試帳號.</span></span><span> <br/></span></p>
+<p><span data-contrast="none"> <span>2b 開始在 <span> </span></span></span><a href="https://exam.cycu.org/"><span data-contrast="auto"><span>https://exam.cycu.org</span></span></a><span data-contrast="none"><span>  <span> </span></span></span><span data-contrast="none"><span>建立考試帳號.</span></span><span> <br/></span></p>
 <h2><span>w4</span></h2>
 <p><span><span class="TextRun SCXO236647226 BCX0" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO236647226 BCX0">電腦輔助設計室 WIFI 連線</span></span><span class="EOP SCXO236647226 BCX0"> </span></span></p>
 <p><span data-contrast="auto"><span>SSID: 810WIFI</span></span><span> </span></p>
@@ -123,10 +113,8 @@
 <h2>w6</h2>
 <p><span class="TextRun SCXO183061634 BCX0" data-contrast="auto" lang="ZH-TW" xml:lang="ZH-TW"><span class="NormalTextRun SCXO183061634 BCX0">在 stud.cycu.org 執行動態網站</span></span><span class="EOP SCXO183061634 BCX0"> </span></p>
 <p><span data-contrast="auto"><span>git config --global http.proxy </span></span><span data-contrast="auto"><span>http://p42.cycu.org:3128</span></span><span> </span></p>
-<p><span data-contrast="auto"><span> </span></span><span> </span></p>
 <p><span data-contrast="auto"><span>git config --global user.name "name"</span></span><span> </span></p>
-<p><span data-contrast="auto"><span> </span></span><span> </span></p>
-<p><span data-contrast="auto"><span>git config --global user.email "email"</span></span><span> </span></p>
+<p><span data-contrast="auto"><span> </span></span><span data-contrast="auto"><span>git config --global user.email "email"</span></span><span> </span></p>
 <p><span data-contrast="auto"><span> </span></span><span> </span></p>
 <p><span data-contrast="auto"><span>git clone --recurse-submodules git@demo:mdecad2022/site-github_帳號.git s</span></span><span> </span></p>
 <p><span data-contrast="auto"><span> </span></span><span> </span></p>
@@ -322,7 +310,10 @@ doc["w11"].bind('click', add)
 <p><!-- 程式執行 ouput 區 --></p>
 <div style="width: 100%; height: 100%;"><textarea autocomplete="off" id="kw_console1"></textarea></div>
 <p><!-- Brython 程式執行的結果, 都以 brython_div1 作為切入位置 --></p>
-<div id="brython_div1"></div>
+<div id="brython_div1">遇到問題</div>
+<div>1.在&lt;&gt;裡面更改電腦ID底線那行，沒有把ID打進去所以沒有使用列名單</div>
+<div>2.&lt;&gt;本來已經改好裡面的程式碼，但是之後案開始卻無法列名單，後來我把這串&lt;!-- 導入 brython 程式庫 --&gt;<br/>&lt;p&gt;<br/>&lt;script src="./../cmsimde/static/brython.js"&gt;&lt;/script&gt;<br/>&lt;script src="./../cmsimde/static/brython_stdlib.js"&gt;&lt;/script&gt;<br/>&lt;/p&gt;<br/>&lt;!-- 啟動 Brython --&gt;<br/>&lt;p&gt;<br/>&lt;script&gt;<br/>window.onload=function(){<br/>brython({debug:1, pythonpath:['./../cmsimde/static/','./../downloads/py/']});<br/>}<br/>&lt;/script&gt;<br/>&lt;/p&gt;<br/>&lt;p&gt;&lt;!-- 導入 FileSaver 與 filereader --&gt;&lt;/p&gt;<br/>&lt;p&gt;<br/>&lt;script src="./../cmsimde/static/ace/FileSaver.min.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="./../cmsimde/static/ace/filereader.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;/p&gt;<br/>&lt;p&gt;&lt;!-- 導入 ace --&gt;&lt;/p&gt;<br/>&lt;p&gt;<br/>&lt;script src="./../cmsimde/static/ace/ace.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="./../cmsimde/static/ace/ext-language_tools.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="./../cmsimde/static/ace/mode-python3.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;script src="./../cmsimde/static/ace/snippets/python.js" type="text/javascript"&gt;&lt;/script&gt;<br/>&lt;/p&gt;<br/>&lt;p&gt;&lt;!-- 導入 gearUtils-0.9.js Cango 齒輪繪圖程式庫 --&gt;<br/>&lt;script src="./../cmsimde/static/Cango-24v03-min.js"&gt;&lt;/script&gt;<br/>&lt;script src="./../cmsimde/static/gearUtils-09.js"&gt;&lt;/script&gt;<br/>&lt;script src="./../cmsimde/static/SVGpathUtils-6v03-min.js"&gt;&lt;/script&gt;<br/>&lt;script src="./../cmsimde/static/sylvester.js"&gt;&lt;/script&gt;<br/>&lt;script src="./../cmsimde/static/PrairieDraw.js"&gt;&lt;/script&gt;<br/>&lt;/p&gt;</div>
+<div>重新貼進去程式碼後才能夠案開始列名單出來</div>
 <p><!-- editor1 結束 --></p>
 <hr/>
 <p><!-- ########################################## --></p>
